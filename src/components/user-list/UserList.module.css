@@ -1,0 +1,37 @@
+.userList table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.userList table, .userList th, .userList td {
+    border-bottom: 1px solid black;
+    text-align: left;
+    padding: 5px;
+}
+
+.userList th {
+    background-color: lightgray;
+}
+
+.btnNew {
+    background-color: #4a4a4a;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+}
+
+.actionCell {
+    width: 1%;
+}
+
+.actionCell button {
+    width: 25px;
+    height: 25px;
+    border-radius: 7px;
+}

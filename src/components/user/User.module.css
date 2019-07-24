@@ -1,0 +1,29 @@
+.userForm table {
+    width: 250px;
+    margin: 0 auto;
+}
+
+.userForm span {
+    white-space: nowrap;
+}
+
+.userForm table input {
+    width: 100%;
+}
+
+.userForm td {
+    padding: 3px 5px;
+}
+
+.userForm td:nth-child(1) {
+    width: 1%;
+}
+
+.submitRow {
+    text-align: center;
+}
+
+.submitRow button {
+    font-size: 14px;
+    border-radius: 5px;
+}
