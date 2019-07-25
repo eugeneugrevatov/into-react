@@ -1,21 +1,21 @@
-.userForm table {
+.editForm table {
     width: 250px;
     margin: 0 auto;
 }
 
-.userForm span {
+.editForm span {
     white-space: nowrap;
 }
 
-.userForm table input {
+.editForm table input {
     width: 100%;
 }
 
-.userForm td {
+.editForm td {
     padding: 3px 5px;
 }
 
-.userForm td:nth-child(1) {
+.editForm td:nth-child(1) {
     width: 1%;
 }
 

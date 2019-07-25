@@ -1,0 +1,29 @@
+.userDetails table {
+    width: 250px;
+    margin: 0 auto;
+}
+
+.userDetails span {
+    white-space: nowrap;
+}
+
+.userDetails table input {
+    width: 100%;
+}
+
+.userDetails td {
+    padding: 3px 5px;
+}
+
+.userDetails td:nth-child(1) {
+    width: 1%;
+}
+
+.submitRow {
+    text-align: center;
+}
+
+.submitRow button {
+    font-size: 14px;
+    border-radius: 5px;
+}

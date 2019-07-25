@@ -7,6 +7,8 @@ function UserList({history}) {
 
     const [users, setUsers] = useState(getUsers());
 
+    const details = id => history.push(`/user/${id}/details`);
+
     const edit = id => history.push(`/user/${id}`);
 
     const remove = id => {
@@ -20,6 +22,7 @@ function UserList({history}) {
             <table>
                 <thead>
                 <tr>
+                    <th/>
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email</th>
@@ -31,6 +34,9 @@ function UserList({history}) {
                 {users.map(user => {
                     return (
                         <tr key={user.id}>
+                            <td className={styles.actionCell}>
+                                <button onClick={() => details(user.id)}> &#9776;</button>
+                            </td>
                             <td>{user.firstName}</td>
                             <td>{user.lastName}</td>
                             <td>{user.email}</td>

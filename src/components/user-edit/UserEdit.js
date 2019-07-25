@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {getUser, saveUser} from '../../dao'
-import styles from './User.module.css'
+import styles from './UserEdit.module.css'
 
-function User({history, match: {params}}) {
+function UserEdit({history, match: {params}}) {
 
     const currentUser = params.id ? getUser(params.id) : {firstName: '', lastName: '', email: ''};
 
@@ -20,7 +20,7 @@ function User({history, match: {params}}) {
     };
 
     return (
-        <form onSubmit={onSubmit} className={styles.userForm}>
+        <form onSubmit={onSubmit} className={styles.editForm}>
             <table>
                 <tbody>
                 <tr>
@@ -48,4 +48,4 @@ function User({history, match: {params}}) {
 
 }
 
-export default User;
+export default UserEdit;
