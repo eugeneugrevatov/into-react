@@ -1,10 +1,10 @@
 import React from 'react';
-import {getUser} from '../../dao'
+import {userDao} from '../../be-mock/daos'
 import styles from './UserDetails.module.css'
 
 function UserDetails({history, match: {params: {id}}}) {
 
-    const {firstName, lastName, email} = getUser(id);
+    const {firstName, lastName, email} = userDao.getUser(id);
 
     return (
         <div className={styles.userDetails}>

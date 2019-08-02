@@ -1,19 +1,19 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
-import {getUsers, removeUser} from "../../dao";
+import {userDao} from "../../be-mock/daos";
 import styles from './UserList.module.css'
 
 function UserList({history}) {
 
-    const [users, setUsers] = useState(getUsers());
+    const [users, setUsers] = useState(userDao.getUsers());
 
     const details = id => history.push(`/user/${id}/details`);
 
     const edit = id => history.push(`/user/${id}`);
 
     const remove = id => {
-        removeUser(id);
-        setUsers(getUsers());
+        userDao.removeUser(id);
+        setUsers(userDao.getUsers());
     };
 
     return (

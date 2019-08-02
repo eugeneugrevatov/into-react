@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import {getUser, saveUser} from '../../dao'
+import {userDao} from '../../be-mock/daos'
 import styles from './UserEdit.module.css'
 
 function UserEdit({history, match: {params}}) {
 
-    const currentUser = params.id ? getUser(params.id) : {firstName: '', lastName: '', email: ''};
+    const currentUser = params.id ? userDao.getUser(params.id) : {firstName: '', lastName: '', email: ''};
 
     const [firstName, setFirstName] = useState(currentUser.firstName);
     const [lastName, setLastName] = useState(currentUser.lastName);
@@ -12,7 +12,7 @@ function UserEdit({history, match: {params}}) {
 
     const onSubmit = e => {
         e.preventDefault();
-        saveUser({...currentUser, firstName, lastName, email});
+        userDao.saveUser({...currentUser, firstName, lastName, email});
         setFirstName('');
         setLastName('');
         setEmail('');
